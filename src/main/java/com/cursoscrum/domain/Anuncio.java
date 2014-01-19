@@ -13,8 +13,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
 
 /**
  *
@@ -36,7 +34,19 @@ public class Anuncio implements Serializable {
     
     private String nombreComercio;
     
-    private Comerciante comerciante;
+    private User comerciante;
+
+    public Anuncio(String titulo, List<Producto> productos, Date fechaPublicacion, String nombreComercio, User comerciante) {
+        this.titulo = titulo;
+        this.productos = productos;
+        this.fechaPublicacion = fechaPublicacion;
+        this.nombreComercio = nombreComercio;
+        this.comerciante = comerciante;
+    }
+
+    public Anuncio() {
+    }
+
 
     public String getTitulo() {
         return titulo;
@@ -66,11 +76,11 @@ public class Anuncio implements Serializable {
         this.nombreComercio = nombreComercio;
     }
 
-    public Comerciante getComerciante() {
+    public User getComerciante() {
         return comerciante;
     }
 
-    public void setComerciante(Comerciante comerciante) {
+    public void setComerciante(User comerciante) {
         this.comerciante = comerciante;
     }
 
@@ -100,7 +110,7 @@ public class Anuncio implements Serializable {
             return false;
         }
         Anuncio other = (Anuncio) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if (!this.nombreComercio.equals(other.nombreComercio) ) {
             return false;
         }
         return true;

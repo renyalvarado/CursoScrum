@@ -1,5 +1,6 @@
 package com.cursoscrum.domain;
 
+import java.io.Serializable;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
@@ -7,7 +8,8 @@ import org.springframework.web.context.WebApplicationContext;
 
 @Component("user")
 @Scope(WebApplicationContext.SCOPE_SESSION)
-public class User {
+public class User implements Serializable{
+    private static final long serialVersionUID = 1L;
 
     private static final String strTemplate =
             "User -> [firstname: %s; lastname: %s; username: %s; role: %s]";
