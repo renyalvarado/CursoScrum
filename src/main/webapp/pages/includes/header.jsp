@@ -20,8 +20,12 @@
                         <input id="password" name="password" type="password" placeholder="Contraseña" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-success">Ingresar</button>
+                     <form class="navbar-form navbar-right" role="form" action="Home" method="post">
+                         
+                            <button type="submit" class="btn btn-success">Registrar</button>
+                     </form>
                 <% } else { %>
-                    <a role="button" href="logout" class="btn btn-primary">Salir</a>
+                <p style="color: white">${user.firstname}</p> <a role="button" href="logout" class="btn btn-primary">Salir</a>
                 <% }%>
             </form>
         </div><!--/.navbar-collapse -->

@@ -10,31 +10,97 @@
         <%@include file="includes/header.jsp" %>
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
-            <div class="container">                
-                <h1>Hello, world! ${user}</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
-            </div>
+            <div class="container">  <h1> ${user.lastname}</h1>               
+                </div>
         </div>
 
         <div class="container">
+            
+             <c:forEach var="anuncio" items="${anuncios}">
+                    <div class="row well" style="margin-bottom: 10px;">
+                        <div class="col-md-2">
+                            <a class="thumbnail">
+                                <img src="http://placehold.it/140x190" />
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <h3><c:out value="${anuncio.titulo}"/></h3>
+                            <p>12/01/2014 12:00pm</p> 
+                            <p><a>Comercio 1</a></p>
+                            <p>Los cortijos</p>                            
+                        </div>
+                    </div>
+                   
+                </c:forEach>
             <!-- Example row of columns -->
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                <div class="col-md-2">
+                    <h2>Productos</h2>
+                    <p><a>Producto 1 </a></p>
+                    <p><a>Producto2 </a></p>
+                    
                 </div>
-                <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                <div class="col-md-10">
+                    <div class="row">
+                        <h2>Anuncios:</h2>
+                    </div>
+                    
+                    <div class="row well" style="margin-bottom: 10px;">
+                        <div class="col-md-2">
+                            <a class="thumbnail">
+                                <img src="http://placehold.it/140x190" />
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Azucar</h3>
+                            <p>12/01/2014 12:00pm</p>
+                            <p><a>Comercio 1</a></p>
+                            <p>Los cortijos</p>                            
+                        </div>
+                    </div>
+
+                    <div class="row well" style="margin-bottom: 10px;">
+                        <div class="col-md-2">
+                            <a class="thumbnail">
+                                <img src="http://placehold.it/140x190" />
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Carne</h3>
+                            <p>12/01/2014 12:00pm</p>
+                            <p><a>Comercio 2</a></p>
+                            <p> LA california</p>                            
+                        </div>
+                    </div>
+
+                    <div class="row well" style="margin-bottom: 10px;">
+                        <div class="col-md-2">
+                            <a class="thumbnail">
+                                <img src="http://placehold.it/140x190" />
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>pollo</h3>
+                            <p>12/01/2014 12:00pm</p>
+                            <p><a>Comercio 3</a></p>
+                            <p>Los cortijos</p>                            
+                        </div>
+                    </div>                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
                 </div>
-                <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                </div>
+               
             </div>
 
             <hr>
