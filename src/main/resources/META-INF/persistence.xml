@@ -3,6 +3,7 @@
   <persistence-unit name="cursoscrum_CursoScrum_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.cursoscrum.domain.Anuncio</class>
+    <class>com.cursoscrum.domain.Producto</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>

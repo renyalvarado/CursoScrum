@@ -7,42 +7,30 @@
 package com.cursoscrum.domain;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 /**
  *
  * @author naramirez
  */
 @Entity
-public class Anuncio implements Serializable {
+public class Producto implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    private String titulo;
-    
-    private List<Producto> productos;
+    private String nombre;
 
-    public String getTitulo() {
-        return titulo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public List<Producto> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(List<Producto> productos) {
-        this.productos = productos;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public Long getId() {
@@ -63,10 +51,10 @@ public class Anuncio implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Anuncio)) {
+        if (!(object instanceof Producto)) {
             return false;
         }
-        Anuncio other = (Anuncio) object;
+        Producto other = (Producto) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -75,7 +63,7 @@ public class Anuncio implements Serializable {
 
     @Override
     public String toString() {
-        return "com.cursoscrum.domain.Anuncio[ id=" + id + " ]";
+        return "com.cursoscrum.domain.Producto[ id=" + id + " ]";
     }
     
 }
