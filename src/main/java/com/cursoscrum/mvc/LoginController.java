@@ -15,8 +15,20 @@ public class LoginController {
     @RequestMapping(value = {"/","/welcome"}, method = RequestMethod.GET)
     @Transactional
     public String showHomePage(Map<String, Object> model) {
-        User user = WiredUserService.defaultUsers.get(0);
-        model.put("message", user);
+       
         return "index";
+    }
+    
+     @RequestMapping(value = {"/add"}, method = RequestMethod.GET)
+    @Transactional
+    public String showAddPage(Map<String, Object> model) {
+        
+        return "add_anuncio";
+    }
+    @RequestMapping(value = {"/register"}, method = RequestMethod.GET)
+    @Transactional
+    public String showRegister(Map<String, Object> model) {
+        
+        return "register";
     }
 }

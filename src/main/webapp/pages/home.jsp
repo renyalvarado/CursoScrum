@@ -9,7 +9,7 @@
     <body>
         <%@include file="includes/header.jsp" %>
         <div class="container">
-            <h1>${message} ${user}</h1>
+            <h1>${message} ${user.firstname}</h1>
             <%@include file="includes/footer.jsp" %>
         </div> <!-- /container -->
     </body>

@@ -62,7 +62,7 @@ public class UserValidatorController {
         }
         
     }    
-    
+   
     @RequestMapping(value = {"/logout"}, method = RequestMethod.GET)
     public String logout(Map<String, Object> model, SessionStatus status) {
         user = null;
