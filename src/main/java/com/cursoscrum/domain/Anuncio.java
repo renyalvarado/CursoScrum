@@ -27,7 +27,7 @@ public class Anuncio implements Serializable {
     
     private String titulo;
     
-    private List<Producto> productos;
+    private String productos;
     
 
     private Date fechaPublicacion;
@@ -36,7 +36,7 @@ public class Anuncio implements Serializable {
     
     private User comerciante;
 
-    public Anuncio(String titulo, List<Producto> productos, Date fechaPublicacion, String nombreComercio, User comerciante) {
+    public Anuncio(String titulo, String productos, Date fechaPublicacion, String nombreComercio, User comerciante) {
         this.titulo = titulo;
         this.productos = productos;
         this.fechaPublicacion = fechaPublicacion;
@@ -56,7 +56,7 @@ public class Anuncio implements Serializable {
         this.titulo = titulo;
     }
 
-    public List<Producto> getProductos() {
+    public String getProductos() {
         return productos;
     }
 
@@ -84,7 +84,7 @@ public class Anuncio implements Serializable {
         this.comerciante = comerciante;
     }
 
-    public void setProductos(List<Producto> productos) {
+    public void setProductos(String productos) {
         this.productos = productos;
     }
 

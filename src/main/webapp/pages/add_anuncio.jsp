@@ -23,25 +23,25 @@
                     <div class="row well" style="margin-bottom: 10px;">
 
 
-                        <form role="form"  > 
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Producto</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Escriba el nombre del producto">
+                        <form role="form" action="/agregar" method="post" > 
+                            <div class="form-group">
+                            <label for="exampleInputEmail1">Titulo</label>
+                            <input type="email" name="titulo" class="form-control" id="exampleInputEmail1" placeholder="Escriba el nombre del producto">
                           </div>
                             
                           <div class="form-group">
-                            <label for="exampleInputPassword1">Fecha de publicacion</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Escriba la fecha de publicacion">
+                            <label for="exampleInputEmail1">Producto</label>
+                            <input type="email" name="productos" class="form-control" id="exampleInputEmail1" placeholder="Escriba el nombre del producto">
                           </div>
-
+                            
                           <div class="form-group">
                             <label for="exampleInputPassword1">Comercio</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Escriba el nombre del comercio">
+                            <input type="input" name="comercio" class="form-control" id="exampleInputPassword1" placeholder="Escriba el nombre del comercio">
                           </div>
                             
                           <div class="form-group">
                             <label for="exampleInputPassword1">Direccion</label>
-                            <textarea class="form-control" rows="3" placeholder='Escriba la direccion del comercio'></textarea>
+                            <textarea class="form-control" name="direccion" rows="3" placeholder='Escriba la direccion del comercio'></textarea>
                           </div> 
                             
                           <div class="form-group">
