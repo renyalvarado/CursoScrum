@@ -7,12 +7,14 @@
 package com.cursoscrum.domain;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
 
 /**
  *
@@ -28,6 +30,13 @@ public class Anuncio implements Serializable {
     private String titulo;
     
     private List<Producto> productos;
+    
+
+    private Date fechaPublicacion;
+    
+    private String nombreComercio;
+    
+    private Comerciante comerciante;
 
     public String getTitulo() {
         return titulo;
@@ -39,6 +48,30 @@ public class Anuncio implements Serializable {
 
     public List<Producto> getProductos() {
         return productos;
+    }
+
+    public Date getFechaPublicacion() {
+        return fechaPublicacion;
+    }
+
+    public void setFechaPublicacion(Date fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
+    }
+
+    public String getNombreComercio() {
+        return nombreComercio;
+    }
+
+    public void setNombreComercio(String nombreComercio) {
+        this.nombreComercio = nombreComercio;
+    }
+
+    public Comerciante getComerciante() {
+        return comerciante;
+    }
+
+    public void setComerciante(Comerciante comerciante) {
+        this.comerciante = comerciante;
     }
 
     public void setProductos(List<Producto> productos) {
